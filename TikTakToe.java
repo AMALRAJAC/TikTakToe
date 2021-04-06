@@ -1,23 +1,20 @@
 
 public class TikTakToe {
-	public static int count=0;
-	public static char[] a;
-			public static int Board(int row ) {
-					for(int i=1; i<=row; i++)   
-					{   
-						count=count+3;
-						for(int j=1; j<=row; j++)   
-						{   
-							System.out.print(" "); 
-							
-							}   
-						System.out.println("\n");
-					}
-				return 0;
-	}
-public static void main(String []args) {
-	int row=3;
-	Board(row);
-}
+	 static void printBoard(char[] board)
+	    {
+	        System.out.println("| " + board[0] + " | "
+	                           + board[1] + " | " + board[2]
+	                           + " |");
+	        System.out.println("| " + board[3] + " | "
+	                           + board[4] + " | " + board[5]
+	                           + " |");
+	        System.out.println("| " + board[6] + " | "
+	                           + board[7] + " | " + board[8]
+	                           + " |");
+	    }
+	  public static void main(String[]args) {
+		  char[] board = new char[10];
+		  printBoard(board);
+	  }
 
 }
