@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class TikTakToe {
 	 static void printBoard(char[] board)
@@ -16,20 +17,17 @@ public class TikTakToe {
 		  Scanner sc=new Scanner(System.in);
 		  
 		  for(int i=0;i<10;i++) {
-		  if(i%2==0) {
 			  System.out.println("user input ");
 			  String user=sc.nextLine();
 			  System.out.println("computer input ="+user);
-		  }
-		  else {
-			  int computer=(int)Math.floor(Math.random()*10)%2;
-			  if(computer==0) {
-				  System.out.println("computer input = x");
-			  }else {
+			  if("x".equals(user)) {
 				  System.out.println("computer input = o");
 			  }
-		  }
+			  else {
+				  System.out.println("computer input = x");
+			  }
+		 
 		  }
 	  }
-
 }
+
