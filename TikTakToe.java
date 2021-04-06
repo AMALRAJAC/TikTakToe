@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class TikTakToe {
 	 static void printBoard(char[] board)
