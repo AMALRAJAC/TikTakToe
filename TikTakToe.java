@@ -20,7 +20,7 @@ public class TikTakToe {
 		  position=sc.nextInt();
 		  System.out.println("enter the position of computer");
 		  positionc=sc.nextInt();
-		  
+		  showBoard();
 		  if(position!=positionc) {
 			  
 				  if((("o".equals(board[position]))||("x".equals(board[position])))) {
@@ -40,11 +40,13 @@ public class TikTakToe {
 			  board[position]="x";
 			  board[positionc]="o";
 			  printBoard(board);
+			  showBoard();
 			  }
 			  else {
 				  board[position]="o";
 				  board[positionc]="x";
-				  printBoard(board); 
+				  printBoard(board);
+				  showBoard();
 			  }
 			  for(int j=1;j<10;j++) {
 				  if(board[j]==null) {
@@ -58,16 +60,44 @@ public class TikTakToe {
 		  else {
 			  System.out.println("players cant choose same position");
 		  }
-		  
+		  showBoard();
 		  
 		  }
 	  
 	  public static void showBoard() {
 		  
-		  for (int a = 1; a < 10; a++) {
-	            board[a] =String.valueOf(a);
-	        }
-		  printBoard(board);
+	  if("x".equals(board[1])&&"x".equals(board[2])&&"x".equals(board[3])||"o".equals(board[1])&&"o".equals(board[2])&&"o".equals(board[3])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[4])&&"x".equals(board[5])&&"x".equals(board[6])||"o".equals(board[4])&&"o".equals(board[5])&&"o".equals(board[6])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[7])&&"x".equals(board[8])&&"x".equals(board[9])||"o".equals(board[7])&&"o".equals(board[8])&&"o".equals(board[9])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[1])&&"x".equals(board[4])&&"x".equals(board[7])||"o".equals(board[1])&&"o".equals(board[4])&&"o".equals(board[7])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[2])&&"x".equals(board[5])&&"x".equals(board[8])||"o".equals(board[2])&&"o".equals(board[5])&&"o".equals(board[8])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[3])&&"x".equals(board[6])&&"x".equals(board[9])||"o".equals(board[3])&&"o".equals(board[6])&&"o".equals(board[9])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[1])&&"x".equals(board[5])&&"x".equals(board[9])||"o".equals(board[1])&&"o".equals(board[5])&&"o".equals(board[9])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
+	  if("x".equals(board[3])&&"x".equals(board[5])&&"x".equals(board[7])||"o".equals(board[3])&&"o".equals(board[5])&&"o".equals(board[7])){
+		  System.out.println("player won");
+		  System.exit(0);
+	  }
 	  }
 	  public static void main(String[]args) {
 		  int check =(int)Math.floor(Math.random()*10)%2;
