@@ -16,6 +16,22 @@ public class TikTakToe {
 	    }
 	 static int computer() {
 		 int computer=(int)Math.floor(Math.random()*10)%9+1;
+		 
+		 if(board[1]==null) {
+			 computer=1;
+		 }
+		 else if(board[3]==null) {
+			 computer=3;
+			 
+		 }
+		 else if(board[7]==null){
+			 computer=7;
+		 }
+		 else if(board[9]==null) {
+			 computer=9;
+		 }
+		 
+		
 		 return computer;	
 	 }
 	 static int user() { 
@@ -25,45 +41,64 @@ public class TikTakToe {
 		 return user;
 	 }
 	 static void freeSpace() {
-		 int count = 0;
 		for(int i=1;i<10;i++) {
 			if(board[i]==null) {
 				System.out.println("free spaces ="+i);
-				count=i;
 				
 			}
 			
 		}
-		 if(count==1) {
-				System.out.println("game draw..");
-				System.exit(0);
+		int count=0;
+		for(int i=1;i<10;i++) {
+			if(board[i]!=null) {
+				count++;
+				
 			}
+			
+		}
+		if(count==9) {
+			System.out.println("game draw");
+			System.exit(0);
+		}
 	 }
 	  static void input(int check) {
 			user_position=user();
-			System.out.println("user position= "+user_position);
-			computer_position=computer();
-			computer_position=play();
-			computer_position=defend();
-			if(computer_position==0) {
-				computer_position=computer();
-			}
-			 
-			System.out.println("computer position= "+computer_position);
-			if(user_position<10&&computer_position<100) {
+			System.out.println("user"+userVal+" has position= "+user_position);
+			
+			if(user_position<10&&computer_position<10) {
 			if(user_position != computer_position) {
 				
 				if(userVal.equals(board[user_position])) {
 					System.out.println("user position value is already filled");
 					user_position=user();
-					printBoard(board);
-				}
-				if(computerVal.equals(board[computer_position])) {
-					System.out.println("computer position value already filled");
-					computer_position=computer();
+					if(board[user_position]!=null) {
+						user_position=user();
+					}
 					printBoard(board);
 				}else {
 					board[user_position]=userVal;
+					printBoard(board);
+					freeSpace();
+					winner();
+				}
+				
+				computer_position=computer();
+				computer_position=play();
+				computer_position=defend();
+				if(computer_position==0) {
+					computer_position=computer();
+				}
+				 
+				System.out.println("computer "+computerVal+" has position= "+computer_position);
+				if(computerVal.equals(board[computer_position])) {
+					System.out.println("computer position value already filled");
+					computer_position=computer();
+					if(board[computer_position]!=null) {
+						computer_position=computer();
+					}
+					printBoard(board);
+				}else {
+					
 					board[computer_position]=computerVal;
 					printBoard(board);
 					freeSpace();
