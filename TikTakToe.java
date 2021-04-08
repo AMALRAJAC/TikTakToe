@@ -10,9 +10,11 @@ public class TikTakToe {
 	        System.out.println("| " + board[4] + " | " + board[5] + " | " + board[6] + " |");
 	        System.out.println("| " + board[7] + " | " + board[8] + " | " + board[9] + " |");
 	    }
-	  static void input() {
+	  static void input(int check) {
 		  Scanner sc=new Scanner(System.in);
-		  String user="x";
+		  
+		  
+		  
 		  
 		  System.out.println("enter the position of user");
 		  position=sc.nextInt();
@@ -34,10 +36,16 @@ public class TikTakToe {
 					  positionc=sc.nextInt();
 					  
 				  }
-			  
+			  if(check==1) {
 			  board[position]="x";
 			  board[positionc]="o";
 			  printBoard(board);
+			  }
+			  else {
+				  board[position]="o";
+				  board[positionc]="x";
+				  printBoard(board); 
+			  }
 			  for(int j=1;j<10;j++) {
 				  if(board[j]==null) {
 					  System.out.println("avalilabale positions are= "+j);
@@ -62,9 +70,19 @@ public class TikTakToe {
 		  printBoard(board);
 	  }
 	  public static void main(String[]args) {
-		  
+		  int check =(int)Math.floor(Math.random()*10)%2;
+		  if(check==1) {
+			  String user="x";
+			  System.out.println("user option = x");
+			  System.out.println("computer option = o");
+		  }else {
+			  String user="o";
+			  System.out.println("user option = o");
+			  System.out.println("computer option = x");
+
+		  }
 		  for(int i=0;i<10;i++) {
-		  input();
+		  input(check);
 		  }
 	  }
 }
