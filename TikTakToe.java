@@ -60,7 +60,16 @@ public class TikTakToe {
 		}
 		if(count==9) {
 			System.out.println("game draw");
-			System.exit(0);
+			System.out.println("do you want to play new game..?      ( y/n) ");
+			  Scanner sc=new Scanner(System.in);
+			  if("y".equals(sc.nextLine())) {
+				  
+				 newGame();
+			  }
+			  else {
+				  System.out.println("game terminated");
+				  System.exit(0);
+			  }
 		}
 	 }
 	  static void input(int check) {
@@ -120,37 +129,219 @@ public class TikTakToe {
 	  
 	  public static void winner() {
 		  
-	  if(userVal.equals(board[1])&&userVal.equals(board[2])&&userVal.equals(board[3])||computerVal.equals(board[1])&&computerVal.equals(board[2])&&computerVal.equals(board[3])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  if(userVal.equals(board[1])&&userVal.equals(board[2])&&userVal.equals(board[3])) {
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else if(userVal.equals(board[4])&&userVal.equals(board[5])&&userVal.equals(board[6])||computerVal.equals(board[4])&&computerVal.equals(board[5])&&computerVal.equals(board[6])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else if (computerVal.equals(board[1])&&computerVal.equals(board[2])&&computerVal.equals(board[3])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else  if(userVal.equals(board[7])&&userVal.equals(board[8])&&userVal.equals(board[9])||computerVal.equals(board[7])&&computerVal.equals(board[8])&&computerVal.equals(board[9])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else if(userVal.equals(board[4])&&userVal.equals(board[5])&&userVal.equals(board[6])) {
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else  if(userVal.equals(board[1])&&userVal.equals(board[4])&&userVal.equals(board[7])||computerVal.equals(board[1])&&computerVal.equals(board[4])&&computerVal.equals(board[7])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else if(computerVal.equals(board[4])&&computerVal.equals(board[5])&&computerVal.equals(board[6])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else  if(userVal.equals(board[2])&&userVal.equals(board[5])&&userVal.equals(board[8])||computerVal.equals(board[2])&&computerVal.equals(board[5])&&computerVal.equals(board[8])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else  if(userVal.equals(board[7])&&userVal.equals(board[8])&&userVal.equals(board[9])) {
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else  if(userVal.equals(board[3])&&userVal.equals(board[6])&&userVal.equals(board[9])||computerVal.equals(board[3])&&computerVal.equals(board[6])&&computerVal.equals(board[9])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else if(computerVal.equals(board[7])&&computerVal.equals(board[8])&&computerVal.equals(board[9])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else if(userVal.equals(board[1])&&userVal.equals(board[5])&&userVal.equals(board[9])||computerVal.equals(board[1])&&computerVal.equals(board[5])&&computerVal.equals(board[9])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else  if(userVal.equals(board[1])&&userVal.equals(board[4])&&userVal.equals(board[7])) {
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
-	  else if(userVal.equals(board[3])&&userVal.equals(board[5])&&userVal.equals(board[7])||computerVal.equals(board[3])&&computerVal.equals(board[5])&&computerVal.equals(board[7])){
-		  System.out.println("player won");
-		  System.exit(0);
+	  else if(computerVal.equals(board[1])&&computerVal.equals(board[4])&&computerVal.equals(board[7])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }
+	  else  if(userVal.equals(board[2])&&userVal.equals(board[5])&&userVal.equals(board[8])) {
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }else if(computerVal.equals(board[2])&&computerVal.equals(board[5])&&computerVal.equals(board[8])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }
+		  
+	  else  if(userVal.equals(board[3])&&userVal.equals(board[6])&&userVal.equals(board[9])) {
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }else if(computerVal.equals(board[3])&&computerVal.equals(board[6])&&computerVal.equals(board[9])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }
+	  else if(userVal.equals(board[1])&&userVal.equals(board[5])&&userVal.equals(board[9])) {
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }else if(computerVal.equals(board[1])&&computerVal.equals(board[5])&&computerVal.equals(board[9])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }
+	  
+	  else if(userVal.equals(board[3])&&userVal.equals(board[5])&&userVal.equals(board[7])){
+			  
+		  System.out.println("user won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
+	  }
+	  else if(computerVal.equals(board[3])&&computerVal.equals(board[5])&&computerVal.equals(board[7])){
+		  System.out.println("computer won");
+		  System.out.println("do you want to play new game..?      ( y/n) ");
+		  Scanner sc=new Scanner(System.in);
+		  if("y".equals(sc.nextLine())) {
+			  
+			 newGame();
+		  }
+		  else {
+			  System.out.println("game terminated");
+			  System.exit(0);
+		  }
 	  }
 	  }
 	  public static int play() {
@@ -400,10 +591,7 @@ public class TikTakToe {
 			  } 
 			return computer_position;
 	  }
-	  
-	  
-	  
-	  public static void main(String[]args) {
+	  public static void newGame() {
 		  int check =(int)Math.floor(Math.random()*10)%2+1;
 		  if(check==userChoice) {
 			 userVal="x";
@@ -417,9 +605,18 @@ public class TikTakToe {
 			  System.out.println("computer option = "+computerVal);
 
 		  }
-		  for(int i=0;;i++) {
-		  input(check);
+		  for(int i=1;i<10;i++) {
+			  board[i]=null;
 		  }
+		  
+		  for(int i=0;;i++) {
+			  input(check);
+			  }
+		  
+	  }
+	  public static void main(String[]args) {
+		 
+		newGame();  
 	  }
 }
 
