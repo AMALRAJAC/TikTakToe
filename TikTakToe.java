@@ -30,7 +30,9 @@ public class TikTakToe {
 		 else if(board[9]==null) {
 			 computer=9;
 		 }
-		 
+		 else if(board[1]!=null||board[3]!=null||board[7]!=null||board[9]!=null){
+			 computer=5;
+		 }
 		
 		 return computer;	
 	 }
