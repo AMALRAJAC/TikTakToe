@@ -38,13 +38,20 @@ public class TikTakToe {
 			  board[position]="x";
 			  board[positionc]="o";
 			  printBoard(board);
-			  
+			  for(int j=1;j<10;j++) {
+				  if(board[j]==null) {
+					  System.out.println("avalilabale positions are= "+j);
+					  
+				  }
+			  } 
 		  
 		  
 		  }
 		  else {
 			  System.out.println("players cant choose same position");
 		  }
+		  
+		  
 		  }
 	  
 	  public static void showBoard() {
@@ -55,7 +62,7 @@ public class TikTakToe {
 		  printBoard(board);
 	  }
 	  public static void main(String[]args) {
-		  showBoard();
+		  
 		  for(int i=0;i<10;i++) {
 		  input();
 		  }
