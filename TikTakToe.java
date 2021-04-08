@@ -25,21 +25,26 @@ public class TikTakToe {
 		 return user;
 	 }
 	 static void freeSpace() {
+		 int count = 0;
 		for(int i=1;i<10;i++) {
 			if(board[i]==null) {
 				System.out.println("free spaces ="+i);
-				if(i==1) {
-					System.out.println(" game draw");
-					System.exit(0);
-				}
+				count=i;
+				
 			}
+			
 		}
+		 if(count==1) {
+				System.out.println("game draw..");
+				System.exit(0);
+			}
 	 }
 	  static void input(int check) {
 			user_position=user();
 			System.out.println("user position= "+user_position);
 			computer_position=computer();
 			computer_position=play();
+			computer_position=defend();
 			if(computer_position==0) {
 				computer_position=computer();
 			}
@@ -235,7 +240,130 @@ public class TikTakToe {
 			  } 
 			return computer_position;
 	  }
-	
+	  public static int defend() {
+		  if(userVal.equals(board[1])&&userVal.equals(board[2])) {
+			  if(board[3]==null) {
+				  computer_position=3;   
+			  }
+		  }
+		  if(userVal.equals(board[1])&&userVal.equals(board[3])) {
+			  if(board[2]==null) {
+				  computer_position=2;   
+			  }
+		  }
+		  if(userVal.equals(board[3])&&userVal.equals(board[2])) {
+			  if(board[1]==null) {
+				  computer_position=1;  
+			  }
+		  }
+		if(userVal.equals(board[4])&&userVal.equals(board[5])){
+			if(board[6]==null) {
+				computer_position=6;   
+				  }
+		  }
+		  if(userVal.equals(board[4])&&userVal.equals(board[6])){
+				if(board[5]==null) {
+					computer_position=5;  
+					  }
+			  }
+		  if(userVal.equals(board[6])&&userVal.equals(board[5])){
+				if(board[4]==null) {
+					computer_position=4;   
+					  }
+			  }
+		if(userVal.equals(board[7])&&userVal.equals(board[8])){
+			if(board[9]==null) {  
+				computer_position=9; 
+			}
+		  }
+		  if(userVal.equals(board[9])&&userVal.equals(board[8])){
+				if(board[7]==null) {  
+					computer_position=7; 
+				}
+			  }
+		  if(userVal.equals(board[7])&&userVal.equals(board[9])){
+				if(board[8]==null) {  
+					computer_position=8; 
+				}
+			  }
+		if(userVal.equals(board[1])&&userVal.equals(board[4])){
+			if(board[7]==null) {  
+				computer_position=7; 
+				}
+		  }
+		  if(userVal.equals(board[7])&&userVal.equals(board[4])){
+				if(board[1]==null) {  
+					computer_position=1; 
+					}
+			  }
+		  if(userVal.equals(board[1])&&userVal.equals(board[7])){
+				if(board[4]==null) {  
+					computer_position=4; 
+					}
+			  }
+		if(userVal.equals(board[2])&&userVal.equals(board[5])){
+			if(board[8]==null) {  
+				computer_position=8; 
+				}
+		  }
+			if(userVal.equals(board[8])&&userVal.equals(board[5])){
+				if(board[2]==null) {  
+					computer_position=2; 
+					}
+			  }
+			if(userVal.equals(board[2])&&userVal.equals(board[8])){
+				if(board[5]==null) {  
+					computer_position=5; 
+					}
+			  }
+		if(userVal.equals(board[3])&&userVal.equals(board[6])){
+			if(board[9]==null) {  
+				computer_position=9; 
+				}
+		  }
+			if(userVal.equals(board[9])&&userVal.equals(board[6])){
+				if(board[3]==null) {  
+					computer_position=3; 
+					}
+			  }
+			if(userVal.equals(board[3])&&userVal.equals(board[9])){
+				if(board[6]==null) {  
+					computer_position=6; 
+					}
+			  }
+		if(userVal.equals(board[1])&&userVal.equals(board[5])){
+			if(board[9]==null) {  
+				computer_position=9; 
+				}
+		  }
+			if(userVal.equals(board[9])&&userVal.equals(board[5])){
+				if(board[1]==null) {  
+					computer_position=1; 
+					}
+			  }
+			if(userVal.equals(board[1])&&userVal.equals(board[9])){
+				if(board[5]==null) {  
+					computer_position=5; 
+					}
+			  }
+		if(userVal.equals(board[3])&&userVal.equals(board[5])){
+			if(board[7]==null) {  
+				computer_position=7; 
+				}
+		  } 
+			if(userVal.equals(board[7])&&userVal.equals(board[5])){
+				if(board[3]==null) {  
+					computer_position=3; 
+					}
+			  } 
+			if(userVal.equals(board[3])&&userVal.equals(board[7])){
+				if(board[5]==null) {  
+					computer_position=5; 
+					}
+			  } 
+			return computer_position;
+	  }
+	  
 	  
 	  
 	  public static void main(String[]args) {
