@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class TikTakToe {
 	public static final int computerChoice=1;
@@ -619,4 +618,3 @@ public class TikTakToe {
 		newGame();  
 	  }
 }
-
